@@ -1,0 +1,164 @@
+:root {
+    --gradient-start: #5de0e6;
+    --gradient-end: #004aad;
+    --primary: #39a1eb;
+    --background: #fff;
+    --on-primary: #fff;
+    --text: #545454;
+    --correct: green;
+    --incorrect: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-end));
+}
+
+.content {
+    background-color: var(--background);
+    border-radius: 20px;
+    padding: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content.selection {
+    /* transition: all 1s; */
+    width: 40vw;
+    height: 50vh;
+}
+
+.content.extended {
+    /* transition: all 1s; */
+    width: 90vw;
+    height: 80vh;
+}
+
+button, select {
+    border-radius: 12px;
+    padding: 15px 30px;
+    font-size: 2vh;
+    text-align: center;
+}
+
+button {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    border: none;
+    font-weight: bold;
+}
+
+select {
+    background: none;
+    color: var(--text);
+    border: var(--text) solid 3px;
+}
+
+.selection > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 16.5vh;
+}
+
+.selection > .title {
+    font-size: 4vh;
+}
+
+#test_selector {
+    width: 15vw;
+}
+
+#test_start {
+    width: 15vw;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.question, .question_title {
+    width: 100%;
+    text-align: left;
+}
+
+.answer_container {
+    width: 100%;
+    height: 50%;
+    display: grid;
+}
+
+.answer_btn {
+    background: none;
+    color: var(--text);
+    border: var(--text) solid 3px;
+    margin: 10px;
+}
+
+.results_wrapper {
+    width: 50vw;
+    height: 70vh;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    height: 10%;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-weight: normal;
+    height: 10%;
+}
+
+.results_container {
+    width: 100%;
+    height: 70%;
+    padding-top: 5%;
+}
+
+.result {
+    display: flex;
+    font-size: 20px;
+    width: 100%;
+    padding: 15px;
+}
+
+.score {
+    /* margin-right: 5%; */
+    font-size: 24px;
+    color: var(--incorrect);
+}
+
+.score.correct {
+    color: var(--correct);
+}
+
+.total {
+    height: 10%;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total > .score {
+    color: var(--text);
+}

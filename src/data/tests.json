@@ -1,0 +1,26 @@
+[
+    {
+        "title": "My Awesome Test",
+        "questions": [
+            {
+                "id": 1,
+                "text": "What is the capital of France?",
+                "options": [
+                    { "text": "London", "correct": false },
+                    { "text": "Paris", "correct": true },
+                    { "text": "Berlin", "correct": false }
+                ]
+            },
+            {
+                "id": 2,
+                "text": "What is the largest planet in our solar system?",
+                "options": [
+                    { "text": "Earth", "correct": false },
+                    { "text": "Jupiter", "correct": true },
+                    { "text": "Mars", "correct": false }
+                ]
+            }
+        ]
+    }
+]
+
