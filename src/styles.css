@@ -35,20 +35,21 @@
 }
 
 .content.selection {
-    /* transition: all 1s; */
     width: 40vw;
     height: 50vh;
 }
 
-.content.extended {
-    /* transition: all 1s; */
-    width: 90vw;
+.content.question {
+    width: 70vw;
     height: 80vh;
+    padding: 5vh 5vw;
+    justify-content: space-between;
+    font-size: 2vh;
 }
 
 button, select {
     border-radius: 12px;
-    padding: 15px 30px;
+    padding: 1.5vh 3vh;
     font-size: 2vh;
     text-align: center;
 }
@@ -88,8 +89,6 @@ select {
 
 .hidden {
     display: none;
-    opacity: 0;
-    transition: opacity 1s;
 }
 
 .question, .question_title {
@@ -100,29 +99,34 @@ select {
 .answer_container {
     width: 100%;
     height: 50%;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .answer_btn {
     background: none;
     color: var(--text);
     border: var(--text) solid 3px;
-    margin: 10px;
+    /* margin: 5%; */
+    height: 10vh;
+    width: 100%;
 }
 
-.results_wrapper {
+.content.results {
     width: 50vw;
     height: 70vh;
 }
 
 .title {
-    font-size: 28px;
+    font-size: 3vh;
     font-weight: bold;
     height: 10%;
 }
 
 .subtitle {
-    font-size: 24px;
+    font-size: 2.5vh;
     font-weight: normal;
     height: 10%;
 }
@@ -135,14 +139,13 @@ select {
 
 .result {
     display: flex;
-    font-size: 20px;
-    width: 100%;
-    padding: 15px;
+    font-size: 2.2vh;
+    /* width: 100%; */
+    padding: 1.8vh;
 }
 
 .score {
-    /* margin-right: 5%; */
-    font-size: 24px;
+    font-size: 2.2vh;
     color: var(--incorrect);
 }
 
@@ -152,8 +155,9 @@ select {
 
 .total {
     height: 10%;
-    width: 100%;
-    font-size: 24px;
+    width: 7vw;
+    font-size: 2.2vh;
+    padding: 1.8vh;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
