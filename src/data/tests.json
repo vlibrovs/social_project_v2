@@ -1,26 +1,1149 @@
 [
     {
-        "title": "My Awesome Test",
+        "title": "Насколько хорошо ты знаешь язык программирования C++",
         "questions": [
             {
                 "id": 1,
-                "text": "What is the capital of France?",
+                "text": "Каким является язык C++?",
                 "options": [
-                    { "text": "London", "correct": false },
-                    { "text": "Paris", "correct": true },
-                    { "text": "Berlin", "correct": false }
+                    { "text": "Компилируемым", "correct": true },
+                    { "text": "Интерпретируемым", "correct": false },
+                    { "text": "Автономным", "correct": false },
+                    { "text": "Всё из выше перечисленного", "correct": false }
                 ]
             },
             {
                 "id": 2,
-                "text": "What is the largest planet in our solar system?",
+                "text": "Какая из указанных библиотек предоставляет возможность вывода в консоль?",
                 "options": [
-                    { "text": "Earth", "correct": false },
-                    { "text": "Jupiter", "correct": true },
-                    { "text": "Mars", "correct": false }
+                    { "text": "hashmap", "correct": false },
+                    { "text": "inputoutput", "correct": false },
+                    { "text": "iomanip", "correct": false },
+                    { "text": "iostream", "correct": true }
+                ]
+            },
+            {
+                "id": 3,
+                "text": "Какая из математических операций НЕ предусмотрена языком C++?",
+                "options": [
+                    { "text": "Операция сложения (+)", "correct": false },
+                    { "text": "Операция получения остатка от деления на число (%))", "correct": false },
+                    { "text": "Операция возведения в степень (^)", "correct": true },
+                    { "text": "Операция побитового сдвига влево (<<)", "correct": false }
+                ]
+            },
+            {
+                "id": 4,
+                "text": "Каким способом НЕЛЬЗЯ вывести данные?",
+                "options": [
+                    { "text": "cout", "correct": false },
+                    { "text": "printf", "correct": false },
+                    { "text": "output", "correct": false },
+                    { "text": "Все из вышеперечисленного предназначено для вывода данных", "correct": true }
+                ]
+            },
+            {
+                "id": 5,
+                "text": "Что выведет на экран \"cout << 5 / 2;\"?",
+                "options": [
+                    { "text": "2.5", "correct": false },
+                    { "text": "2.50000", "correct": false },
+                    { "text": "2", "correct": true },
+                    { "text": "3", "correct": false },
+                    { "text": "Ошибка", "correct": false }
+                ]
+            },
+            {
+                "id": 6,
+                "text": "Что выведет на экран \"printf(\"%.3lf\", 5 / 2.0);\"?",
+                "options": [
+                    { "text": "2.5", "correct": false },
+                    { "text": "2", "correct": false },
+                    { "text": "2.500", "correct": true },
+                    { "text": "3", "correct": false },
+                    { "text": "Ошибка", "correct": false }
+                ]
+            },
+            {
+                "id": 7,
+                "text": "Что выведет на экран \"sqrt(5);\"?",
+                "options": [
+                    { "text": "2.2360679775", "correct": false },
+                    { "text": "2", "correct": false },
+                    { "text": "Ничего", "correct": true },
+                    { "text": "Ошибка", "correct": false }
+                ]
+            },
+            {
+                "id": 8,
+                "text": "Какой из вариантов кода НЕ отвечает за инициализацию строки(формально)?",
+                "options": [
+                    { "text": "string message = \"Hello\";", "correct": false },
+                    { "text": "char message[5] = \"Hello\";", "correct": true },
+                    { "text": "char message[5] = { 'H', 'e', 'l', 'l', 'o' };", "correct": false },
+                    { "text": "char message[] = { 'H', 'e', 'l', 'l', 'o' };", "correct": false }
+                ]
+            },
+            {
+                "id": 9,
+                "text": "За что отвечает операция \"*\", кроме умножения?",
+                "options": [
+                    { "text": "Операция взятия имени", "correct": false },
+                    { "text": "Операция взятия значения первого элемента массива", "correct": false },
+                    { "text": "Операция разименования", "correct": true },
+                    { "text": "Операция выделения старшего разряда в двоичной записи числа", "correct": false }
+                ]
+            },
+            {
+                "id": 10,
+                "text": "Какая из операций НЕ относится к побитовым?",
+                "options": [
+                    { "text": "^", "correct": false },
+                    { "text": "~", "correct": false },
+                    { "text": ">>", "correct": false },
+                    { "text": "$", "correct": true },
+                    { "text": "&", "correct": false },
+                    { "text": "|", "correct": false }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Основы C++",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Что такое переменная в C++?",
+                "options": [
+                    { "text": "Это функция", "correct": false },
+                    { "text": "Это контейнер для хранения данных", "correct": true },
+                    { "text": "Это ошибка компиляции", "correct": false }
+                ]
+            },
+            {
+                "id": 2,
+                "text": "Какой оператор используется для присвоения значения переменной?",
+                "options": [
+                    { "text": "'=='", "correct": false },
+                    { "text": "'='", "correct": true },
+                    { "text": ":=", "correct": false }
+                ]
+            },
+            {
+                "id": 3,
+                "text": "Как объявить массив целых чисел размером 5?",
+                "options": [
+                    { "text": "int[5] arr;", "correct": false },
+                    { "text": "int arr[5];", "correct": true },
+                    { "text": "array int[5];", "correct": false }
+                ]
+            },
+            {
+                "id": 4,
+                "text": "Какой ключевое слово используется для создания класса?",
+                "options": [
+                    { "text": "struct", "correct": false },
+                    { "text": "class", "correct": true },
+                    { "text": "object", "correct": false }
+                ]
+            },
+            {
+                "id": 5,
+                "text": "Какой из следующих вариантов является корректным комментарием в C++?",
+                "options": [
+                    { "text": "// Это комментарий", "correct": true },
+                    { "text": "/ Это комментарий /", "correct": false },
+                    { "text": "Оба варианта верны", "correct": false }
+                ]
+            },
+            {
+                "id": 6,
+                "text": "Какой тип данных используется для хранения символов?",
+                "options": [
+                    { "text": "char", "correct": true },
+                    { "text": "string", "correct": false },
+                    { "text": "int", "correct": false }
+                ]
+            },
+            {
+                "id": 7,
+                "text": "Что делает оператор `++` в C++?",
+                "options": [
+                    { "text": "Увеличивает значение на 1", "correct": true },
+                    { "text": "Уменьшает значение на 1", "correct": false },
+                    { "text": "Сравнивает два значения", "correct": false }
+                ]
+            },
+            {
+                "id": 8,
+                "text": "Как написать конструкцию `if` в C++?",
+                "options": [
+                    { "text": "if (условие) {...}", "correct": true },
+                    { "text": "if условие {...}", "correct": false },
+                    { "text": "если (условие) {...}", "correct": false }
+                ]
+            },
+            {
+                "id": 9,
+                "text": "Какой метод используется для считывания ввода с консоли?",
+                "options": [
+                    { "text": "input", "correct": false },
+                    { "text": "scan", "correct": false },
+                    { "text": "cin", "correct": true }
+                ]
+            },
+            {
+                "id": 10,
+                "text": "Какое значение будет выведено, если переменная `x` равна 5 и мы напечатаем `x * 2`?",
+                "options": [
+                    { "text": "10", "correct": true },
+                    { "text": "25", "correct": false },
+                    { "text": "2", "correct": false }
+                ]
+            },
+            {
+                "id": 11,
+                "text": "Как объявить функцию, которая не возвращает значение?",
+                "options": [
+                    { "text": "void functionName();", "correct": true },
+                    { "text": "functionName();", "correct": false },
+                    { "text": "int functionName();", "correct": false }
+                ]
+            },
+            {
+                "id": 12,
+                "text": "Какой оператор используется для разыменования указателя?",
+                "options": [
+                    { "text": "*", "correct": true },
+                    { "text": "&", "correct": false },
+                    { "text": "->", "correct": false }
+                ]
+            },
+            {
+                "id": 13,
+                "text": "Что такое перегрузка функции?",
+                "options": [
+                    { "text": "Определение функции с разными возвращаемыми типами", "correct": false },
+                    { "text": "Определение функции с тем же именем, но разным количеством аргументов", "correct": true },
+                    { "text": "Определение функции внутри другой функции", "correct": false }
+                ]
+            },
+            {
+                "id": 14,
+                "text": "Какой из этих типов является ссылкой?",
+                "options": [
+                    { "text": "int", "correct": false },
+                    { "text": "int*", "correct": false },
+                    { "text": "int&", "correct": true }
+                ]
+            },
+            {
+                "id": 15,
+                "text": "Какой из следующих типов данных является булевым?",
+                "options": [
+                    { "text": "bool", "correct": true },
+                    { "text": "boolean", "correct": false },
+                    { "text": "btype", "correct": false }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Углублённый C++",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Какой метод используется для динамического выделения памяти в C++?",
+                "options": [
+                    { "text": "malloc", "correct": false },
+                    { "text": "new", "correct": true },
+                    { "text": "Callocate", "correct": false }
+                ]
+            },
+            {
+                "id": 2,
+                "text": "Какой из приведённых ниже типов является указателем?",
+                "options": [
+                    { "text": "int", "correct": false },
+                    { "text": "int*", "correct": true },
+                    { "text": "int&", "correct": false }
+                ]
+            },
+            {
+                "id": 3,
+                "text": "Что происходит при вызове деструктора?",
+                "options": [
+                    { "text": "Объект создается", "correct": false },
+                    { "text": "Объект разрушается", "correct": true },
+                    { "text": "Компилятор выдает ошибку", "correct": false }
+                ]
+            },
+            {
+                "id": 4,
+                "text": "Какой модификатор доступа обеспечивает наименьшую видимость в классе?",
+                "options": [
+                    { "text": "public", "correct": false },
+                    { "text": "private", "correct": false },
+                    { "text": "protected", "correct": true }
+                ]
+            },
+            {
+                "id": 5,
+                "text": "Что означает ключевое слово `virtual` в C++?",
+                "options": [
+                    { "text": "Метод может быть переопределен в производном классе", "correct": true },
+                    { "text": "Метод не может быть переопределен", "correct": false },
+                    { "text": "Методы могут быть вызваны без создания экземпляра класса", "correct": false }
+                ]
+            },
+            {
+                "id": 6,
+                "text": "Какой оператор используется для перегрузки оператора сложения в классе?",
+                "options": [
+                    { "text": "+", "correct": false },
+                    { "text": "add", "correct": false },
+                    { "text": "operator+", "correct": true }
+                ]
+            },
+            {
+                "id": 7,
+                "text": "Что такое `namespace` в C++?",
+                "options": [
+                    { "text": "Область видимости", "correct": true },
+                    { "text": "Новый тип данных", "correct": false },
+                    { "text": "Указатель на объект", "correct": false }
+                ]
+            },
+            {
+                "id": 8,
+                "text": "Какой из следующих методов позволяет сделать копию объекта в C++?",
+                "options": [
+                    { "text": "Конструктор копирования", "correct": true },
+                    { "text": "Деструктор", "correct": false },
+                    { "text": "Основной конструктор", "correct": false }
+                ]
+            },
+            {
+                "id": 9,
+                "text": "Какой из перечисленных классов используется для обработки вывода в консоль?",
+                "options": [
+                    { "text": "cin", "correct": false },
+                    { "text": "cout", "correct": true },
+                    { "text": "std::input", "correct": false }
+                ]
+            },
+            {
+                "id": 10,
+                "text": "Какой метод доступен в классе `string` стандартной библиотеки?",
+                "options": [
+                    { "text": "length()", "correct": true },
+                    { "text": "sizelop()", "correct": false },
+                    { "text": "hash_search()", "correct": false }
+                ]
+            },
+            {
+                "id": 11,
+                "text": "Как объявить класс с конструкторами по умолчанию и с параметрами?",
+                "options": [
+                    { "text": "class MyClass { ... };", "correct": false },
+                    { "text": "class MyClass { MyClass(); MyClass(int, bool, double); };", "correct": false },
+                    { "text": "class MyClass { MyClass() {} MyClass(int a) {} };", "correct": true }
+                ]
+            },
+            {
+                "id": 12,
+                "text": "Как проверить условие на равенство в C++?",
+                "options": [
+                    { "text": "==", "correct": true },
+                    { "text": "=", "correct": false },
+                    { "text": "===", "correct": false }
+                ]
+            },
+            {
+                "id": 13,
+                "text": "Что такое исключение в C++?",
+                "options": [
+                    { "text": "Ошибка в программе", "correct": false },
+                    { "text": "Способ обработки ошибок во время выполнения", "correct": true },
+                    { "text": "Логическая ошибка", "correct": false }
+                ]
+            },
+            {
+                "id": 14,
+                "text": "Какой из операторов используется для управления потоком выполнения?",
+                "options": [
+                    { "text": "if", "correct": false },
+                    { "text": "return", "correct": true },
+                    { "text": "both A and B", "correct": false }
+                ]
+            },
+            {
+                "id": 15,
+                "text": "Какой размер имеет `int` на большинстве систем?",
+                "options": [
+                    { "text": "4 байта", "correct": true },
+                    { "text": "8 байт", "correct": false },
+                    { "text": "2 байта", "correct": false }
+                ]
+            },
+            {
+                "id": 16,
+                "text": "Какой из следующих контейнеров является ассоциативным?",
+                "options": [
+                    { "text": "vector", "correct": false },
+                    { "text": "list", "correct": false },
+                    { "text": "map", "correct": true }
+                ]
+            },
+            {
+                "id": 17,
+                "text": "Какой из перечисленных методов позволяет добавить элемент в конец вектор?",
+                "options": [
+                    { "text": "push()", "correct": false },
+                    { "text": "add()", "correct": false },
+                    { "text": "push_back()", "correct": true }
+                ]
+            },
+            {
+                "id": 18,
+                "text": "Что такое шаблон в C++?",
+                "options": [
+                    { "text": "Указание на объект", "correct": false },
+                    { "text": "Способ создания функции или класса с параметрами типа", "correct": true },
+                    { "text": "Способ обработки ошибок", "correct": false }
+                ]
+            },
+            {
+                "id": 19,
+                "text": "Какой определённый метод стандартной библиотеки возвращает минимальное значение?",
+                "options": [
+                    { "text": "min()", "correct": true },
+                    { "text": "minimum()", "correct": false },
+                    { "text": "lowest()", "correct": false }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Расширенный тест по C++",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Какой из следующих операторов используется для инкрементации значения переменной?",
+                "options": [
+                    { "text": "++", "correct": true },
+                    { "text": "+++", "correct": false },
+                    { "text": "--", "correct": false }
+                ]
+            },
+            {
+                "id": 2,
+                "text": "Какое ключевое слово используется для указания виртуального метода в C++?",
+                "options": [
+                    { "text": "virtual", "correct": true },
+                    { "text": "override", "correct": false },
+                    { "text": "dynamic", "correct": false }
+                ]
+            },
+            {
+                "id": 3,
+                "text": "Какой из следующих типов данных является базовым типом в C++?",
+                "options": [
+                    { "text": "int", "correct": true },
+                    { "text": "Array", "correct": false },
+                    { "text": "Function", "correct": false }
+                ]
+            },
+            {
+                "id": 4,
+                "text": "Какой стандарт C++ был принят в 2011 году?",
+                "options": [
+                    { "text": "C++98", "correct": false },
+                    { "text": "C++11", "correct": true },
+                    { "text": "C++14", "correct": false }
+                ]
+            },
+            {
+                "id": 5,
+                "text": "Какой из следующих модификаторов доступ позволяет получить доступ к членам класса из производного класса?",
+                "options": [
+                    { "text": "private", "correct": false },
+                    { "text": "protected", "correct": true },
+                    { "text": "public", "correct": false }
+                ]
+            },
+            {
+                "id": 6,
+                "text": "Какой метод используется для создания динамического массива в C++?",
+                "options": [
+                    { "text": "new", "correct": true },
+                    { "text": "malloc", "correct": false },
+                    { "text": "calloc", "correct": false }
+                ]
+            },
+            {
+                "id": 7,
+                "text": "Чем является `nullptr` в C++?",
+                "options": [
+                    { "text": "Неверный указатель", "correct": false },
+                    { "text": "Нулевой указатель", "correct": true },
+                    { "text": "Тип данных", "correct": false }
+                ]
+            },
+            {
+                "id": 8,
+                "text": "Что происходит при выходе из области видимости объекта?",
+                "options": [
+                    { "text": "Объект уничтожается", "correct": true },
+                    { "text": "Объект остается в памяти", "correct": false },
+                    { "text": "Объект перемещается", "correct": false }
+                ]
+            },
+            {
+                "id": 9,
+                "text": "Какой из следующих классом стандартной библиотеки обрабатывает исключения?",
+                "options": [
+                    { "text": "exception", "correct": true },
+                    { "text": "error", "correct": false },
+                    { "text": "catch", "correct": false }
+                ]
+            },
+            {
+                "id": 10,
+                "text": "Какой механизм позволяет переопределять методы базового класса в производном классе?",
+                "options": [
+                    { "text": "Наследование", "correct": true },
+                    { "text": "Инкапсуляция", "correct": false },
+                    { "text": "Полиморфизм", "correct": false }
+                ]
+            },
+            {
+                "id": 11,
+                "text": "Какое значение по умолчанию имеет переменная типа `bool`?",
+                "options": [
+                    { "text": "true", "correct": false },
+                    { "text": "false", "correct": true },
+                    { "text": "0", "correct": false }
+                ]
+            },
+            {
+                "id": 12,
+                "text": "Какой элемент синтаксиса используется для обработки условий в C++?",
+                "options": [
+                    { "text": "if", "correct": true },
+                    { "text": "when", "correct": false },
+                    { "text": "switch", "correct": false }
+                ]
+            },
+            {
+                "id": 13,
+                "text": "Какой из перечисленных контейнеров не является последовательным?",
+                "options": [
+                    { "text": "vector", "correct": false },
+                    { "text": "list", "correct": false },
+                    { "text": "map", "correct": true }
+                ]
+            },
+            {
+                "id": 14,
+                "text": "Какой метод используется для добавления элемента в конец вектора?",
+                "options": [
+                    { "text": "push()", "correct": false },
+                    { "text": "push_back()", "correct": true },
+                    { "text": "append()", "correct": false }
+                ]
+            },
+            {
+                "id": 15,
+                "text": "Что означает использование `#include` в C++?",
+                "options": [
+                    { "text": "Подключение библиотек", "correct": true },
+                    { "text": "Создание новой функции", "correct": false },
+                    { "text": "Объявление переменной", "correct": false }
+                ]
+            },
+            {
+                "id": 16,
+                "text": "Какой из операторов используется для разыменования указателя?",
+                "options": [
+                    { "text": "*", "correct": true },
+                    { "text": "&", "correct": false },
+                    { "text": "->", "correct": false }
+                ]
+            },
+            {
+                "id": 17,
+                "text": "Каким ключевым словом обозначается конец программы в C++?",
+                "options": [
+                    { "text": "end", "correct": false },
+                    { "text": "finish", "correct": false },
+                    { "text": "return", "correct": true }
+                ]
+            },
+            {
+                "id": 18,
+                "text": "Какой метод доступен в строках `std::string`?",
+                "options": [
+                    { "text": "find()", "correct": true },
+                    { "text": "locate()", "correct": false },
+                    { "text": "search()", "correct": false }
+                ]
+            },
+            {
+                "id": 19,
+                "text": "Какой оператор используется для совмещения двух строк?",
+                "options": [
+                    { "text": "+", "correct": true },
+                    { "text": "||", "correct": false },
+                    { "text": "&&", "correct": false }
+                ]
+            },
+            {
+                "id": 20,
+                "text": "Что означает `struct` в C++?",
+                "options": [
+                    { "text": "Класс без методов", "correct": true },
+                    { "text": "Указатель", "correct": false },
+                    { "text": "Свойство", "correct": false }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Тест по C++: Углубленное изучение",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Что такое RAII в C++?",
+                "options": [
+                    { "text": "Рациональный алгоритм интеграции", "correct": false },
+                    { "text": "Ресурс инициализации и освобождения", "correct": true },
+                    { "text": "Метод выбора алгоритма", "correct": false }
+                ]
+            },
+            {
+                "id": 2,
+                "text": "Какой из следующих операторов применяется для обработки ошибок в C++?",
+                "options": [
+                    { "text": "try/catch", "correct": true },
+                    { "text": "if/else", "correct": false },
+                    { "text": "throw/return", "correct": false }
+                ]
+            },
+            {
+                "id": 3,
+                "text": "Какой стандарт C++ был принят в 2014 году?",
+                "options": [
+                    { "text": "C++11", "correct": false },
+                    { "text": "C++14", "correct": true },
+                    { "text": "C++17", "correct": false }
+                ]
+            },
+            {
+                "id": 4,
+                "text": "Какой из следующих методов используется для сравнения строк?",
+                "options": [
+                    { "text": "compare()", "correct": true },
+                    { "text": "equals()", "correct": false },
+                    { "text": "compareTo()", "correct": false }
+                ]
+            },
+            {
+                "id": 5,
+                "text": "Что такое полиморфизм в C++?",
+                "options": [
+                    { "text": "Способ переопределения методов", "correct": true },
+                    { "text": "Способ инкапсуляции данных", "correct": false },
+                    { "text": "Способ управления памятью", "correct": false }
+                ]
+            },
+            {
+                "id": 6,
+                "text": "Какое ключевое слово используется для создания класса?",
+                "options": [
+                    { "text": "class", "correct": true },
+                    { "text": "struct", "correct": false },
+                    { "text": "type", "correct": false }
+                ]
+            },
+            {
+                "id": 7,
+                "text": "Что происходит, когда вызывается деструктор?",
+                "options": [
+                    { "text": "Удаляется объект", "correct": true },
+                    { "text": "Создается объект", "correct": false },
+                    { "text": "Исходное значение объекта обнуляется", "correct": false }
+                ]
+            },
+            {
+                "id": 8,
+                "text": "Какой из следующих типов данных является ссылочным?",
+                "options": [
+                    { "text": "int", "correct": false },
+                    { "text": "int&", "correct": true },
+                    { "text": "double", "correct": false }
+                ]
+            },
+            {
+                "id": 9,
+                "text": "Какой метод используется для сортировки вектора?",
+                "options": [
+                    { "text": "sort()", "correct": true },
+                    { "text": "order()", "correct": false },
+                    { "text": "arrange()", "correct": false }
+                ]
+            },
+            {
+                "id": 10,
+                "text": "Что возвращает функция `sizeof`?",
+                "options": [
+                    { "text": "Размер переменной в байтах", "correct": true },
+                    { "text": "Число элементов", "correct": false },
+                    { "text": "Тип переменной", "correct": false }
+                ]
+            },
+            {
+                "id": 11,
+                "text": "Какой модификатор доступа позволяет доступ к членам только из производных классов?",
+                "options": [
+                    { "text": "private", "correct": false },
+                    { "text": "protected", "correct": true },
+                    { "text": "public", "correct": false }
+                ]
+            },
+            {
+                "id": 12,
+                "text": "Как написать комментарий на одной строке в C++?",
+                "options": [
+                    { "text": "// Это комментарий", "correct": true },
+                    { "text": "# Это комментарий", "correct": false },
+                    { "text": "/* Это комментарий", "correct": false }
+                ]
+            },
+            {
+                "id": 13,
+                "text": "Какое слово используется для создания экземпляра класса?",
+                "options": [
+                    { "text": "new", "correct": true },
+                    { "text": "create", "correct": false },
+                    { "text": "instance", "correct": false }
+                ]
+            },
+            {
+                "id": 14,
+                "text": "Что такое шаблоны в C++?",
+                "options": [
+                    { "text": "Способы создания объектов", "correct": false },
+                    { "text": "Механизм создания обобщенных функций и классов", "correct": true },
+                    { "text": "Методы обработки ошибок", "correct": false }
+                ]
+            },
+            {
+                "id": 15,
+                "text": "Какой контейнер используется для хранения пар ключ-значение в стандартной библиотеке C++?",
+                "options": [
+                    { "text": "vector", "correct": false },
+                    { "text": "map", "correct": true },
+                    { "text": "list", "correct": false }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Тест по ООП #1",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Что из перечисленного является основным принципом ООП?",
+                "options": [
+                    { "text": "Наследование", "correct": true },
+                    { "text": "Параллелизм", "correct": false },
+                    { "text": "Процедурное программирование", "correct": false }
+                ]
+            },
+            {
+                "id": 2,
+                "text": "Какой принцип ООП позволяет создавать новые классы на основе существующих?",
+                "options": [
+                    { "text": "Инкапсуляция", "correct": false },
+                    { "text": "Полиморфизм", "correct": false },
+                    { "text": "Наследование", "correct": true }
+                ]
+            },
+            {
+                "id": 3,
+                "text": "Как называется механизм, позволяющий классу использовать функции и переменные других классов?",
+                "options": [
+                    { "text": "Инкапсуляция", "correct": false },
+                    { "text": "Наследование", "correct": true },
+                    { "text": "Полиморфизм", "correct": false }
+                ]
+            },
+            {
+                "id": 4,
+                "text": "Что такое полиморфизм в контексте ООП?",
+                "options": [
+                    { "text": "Способ создания объектов", "correct": false },
+                    { "text": "Способы обращения к элементам класса", "correct": false },
+                    { "text": "Способ предоставления одного интерфейса для различных типов", "correct": true }
+                ]
+            },
+            {
+                "id": 5,
+                "text": "Какой из следующих терминов относится к скрытию данных?",
+                "options": [
+                    { "text": "Инкапсуляция", "correct": true },
+                    { "text": "Наследование", "correct": false },
+                    { "text": "Полиморфизм", "correct": false }
+                ]
+            },
+            {
+                "id": 6,
+                "text": "Какой модификатор доступа делает члены класса доступными только в пределах этого класса и его наследников?",
+                "options": [
+                    { "text": "private", "correct": false },
+                    { "text": "protected", "correct": true },
+                    { "text": "public", "correct": false }
+                ]
+            },
+            {
+                "id": 7,
+                "text": "Что такое абстрактный класс?",
+                "options": [
+                    { "text": "Класс, не имеющий объектов", "correct": true },
+                    { "text": "Класс без методов", "correct": false },
+                    { "text": "Класс, который может быть инстанцирован", "correct": false }
+                ]
+            },
+            {
+                "id": 8,
+                "text": "Какой оператор используется для перегрузки при отсутствии указателя на класс?",
+                "options": [
+                    { "text": "new", "correct": false },
+                    { "text": "this", "correct": false },
+                    { "text": "operator", "correct": true }
+                ]
+            },
+            {
+                "id": 9,
+                "text": "Какой механизм ООП позволяет использовать один интерфейс для разных классов?",
+                "options": [
+                    { "text": "Инкапсуляция", "correct": false },
+                    { "text": "Полиморфизм", "correct": true },
+                    { "text": "Абстракция", "correct": false }
+                ]
+            },
+            {
+                "id": 10,
+                "text": "Какой из следующих членов класса можно сделать виртуальным?",
+                "options": [
+                    { "text": "Конструктор", "correct": false },
+                    { "text": "Деструктор", "correct": true },
+                    { "text": "Статический метод", "correct": false }
+                ]
+            },
+            {
+                "id": 11,
+                "text": "Что такое интерфейс в ООП?",
+                "options": [
+                    { "text": "Класс без методов", "correct": false },
+                    { "text": "Абстрактный класс с чисто виртуальными методами", "correct": true },
+                    { "text": "Обычный класс с методами", "correct": false }
+                ]
+            },
+            {
+                "id": 12,
+                "text": "Что такое композиция в ООП?",
+                "options": [
+                    { "text": "Связывание классов", "correct": false },
+                    { "text": "Создание объектов одного класса внутри другого", "correct": true },
+                    { "text": "Создание наследованных классов", "correct": false }
+                ]
+            },
+            {
+                "id": 13,
+                "text": "Какой механизм ООП позволяет создавать подклассы?",
+                "options": [
+                    { "text": "Инкапсуляция", "correct": false },
+                    { "text": "Наследование", "correct": true },
+                    { "text": "Полиморфизм", "correct": false }
+                ]
+            },
+            {
+                "id": 14,
+                "text": "Что делает ключевое слово `virtual`?",
+                "options": [
+                    { "text": "Определяет обычный метод", "correct": false },
+                    { "text": "Разрешает переопределение метода в производных классах", "correct": true },
+                    { "text": "Задает статическую политику", "correct": false }
+                ]
+            },
+            {
+                "id": 15,
+                "text": "Что такое чисто виртуальная функция?",
+                "options": [
+                    { "text": "Функция без реализации", "correct": true },
+                    { "text": "Функция с реализацией", "correct": false },
+                    { "text": "Функция, которая не может быть вызвана", "correct": false }
+                ]
+            },
+            {
+                "id": 16,
+                "text": "Какой из следующих классов является базовым в иерархии наследования?",
+                "options": [
+                    { "text": "Родительский класс", "correct": true },
+                    { "text": "Дочерний класс", "correct": false },
+                    { "text": "Абстрактный класс", "correct": false }
+                ]
+            },
+            {
+                "id": 17,
+                "text": "Какой из указанных механизмов позволяет скрыть сложность реализации?",
+                "options": [
+                    { "text": "Инкапсуляция", "correct": true },
+                    { "text": "Полиморфизм", "correct": false },
+                    { "text": "Композиция", "correct": false }
+                ]
+            },
+            {
+                "id": 18,
+                "text": "Чем отличается перегрузка методов от переопределения?",
+                "options": [
+                    { "text": "Перегрузка происходит в одном классе, переопределение — в производном", "correct": true },
+                    { "text": "Перегрузка применяется только к статическим методам", "correct": false },
+                    { "text": "Они не отличаются", "correct": false }
+                ]
+            },
+            {
+                "id": 19,
+                "text": "Что такое агрегирование в ООП?",
+                "options": [
+                    { "text": "Отношение целого к частям", "correct": true },
+                    { "text": "Создание множества объектов", "correct": false },
+                    { "text": "Наследование классов", "correct": false }
+                ]
+            },
+            {
+                "id": 20,
+                "text": "Каков смысл использования `this` в методах класса?",
+                "options": [
+                    { "text": "Ссылка на текущий объект", "correct": true },
+                    { "text": "Ссылка на базовый класс", "correct": false },
+                    { "text": "Ссылка на родительский класс", "correct": false }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "Тест по ООП #2",
+        "questions": [
+            {
+                "id": 1,
+                "text": "Что такое класс в ООП?",
+                "options": [
+                    { "text": "Шаблон для создания объектов", "correct": true },
+                    { "text": "Запись данных", "correct": false },
+                    { "text": "Статическая структура", "correct": false }
+                ]
+            },
+            {
+                "id": 2,
+                "text": "Что такое объект в ООП?",
+                "options": [
+                    { "text": "Экземпляр класса", "correct": true },
+                    { "text": "Набор методов", "correct": false },
+                    { "text": "Тип данных", "correct": false }
+                ]
+            },
+            {
+                "id": 3,
+                "text": "Что делает инкапсуляция?",
+                "options": [
+                    { "text": "Скрывает детали реализации", "correct": true },
+                    { "text": "Создает дочерние классы", "correct": false },
+                    { "text": "Определяет интерфейс", "correct": false }
+                ]
+            },
+            {
+                "id": 4,
+                "text": "Какой принцип позволяет использовать один интерфейс для разных классов?",
+                "options": [
+                    { "text": "Наследование", "correct": false },
+                    { "text": "Полиморфизм", "correct": true },
+                    { "text": "Инкапсуляция", "correct": false }
+                ]
+            },
+            {
+                "id": 5,
+                "text": "Что такое абстракция в ООП?",
+                "options": [
+                    { "text": "Игнорирование сложных процессов", "correct": false },
+                    { "text": "Выделение важных характеристик", "correct": true },
+                    { "text": "Создание базового класса", "correct": false }
+                ]
+            },
+            {
+                "id": 6,
+                "text": "Что такое наследование?",
+                "options": [
+                    { "text": "Создание новых классов на основе существующих", "correct": true },
+                    { "text": "Сокрытие данных", "correct": false },
+                    { "text": "Объединение классов", "correct": false }
+                ]
+            },
+            {
+                "id": 7,
+                "text": "Что такое виртуальный метод?",
+                "options": [
+                    { "text": "Метод, который можно переопределить", "correct": true },
+                    { "text": "Метод, который нельзя переопределить", "correct": false },
+                    { "text": "Статический метод", "correct": false }
+                ]
+            },
+            {
+                "id": 8,
+                "text": "Что делает ключевое слово `final` перед методом?",
+                "options": [
+                    { "text": "Запрещает переопределение метода", "correct": true },
+                    { "text": "Указывает на статический метод", "correct": false },
+                    { "text": "Определяет виртуальный метод", "correct": false }
+                ]
+            },
+            {
+                "id": 9,
+                "text": "Что такое композиция?",
+                "options": [
+                    { "text": "Создание объектов одного класса внутри другого", "correct": true },
+                    { "text": "Создание новых классов на основе существующих", "correct": false },
+                    { "text": "Реализация интерфейсов", "correct": false }
+                ]
+            },
+            {
+                "id": 10,
+                "text": "Что такое агрегирование в ООП?",
+                "options": [
+                    { "text": "Отношение целого к частям", "correct": true },
+                    { "text": "Создание экземпляров классов", "correct": false },
+                    { "text": "Наследование классов", "correct": false }
+                ]
+            },
+            {
+                "id": 11,
+                "text": "Какой тип члена класса может быть статическим?",
+                "options": [
+                    { "text": "Метод", "correct": true },
+                    { "text": "Конструктор", "correct": false },
+                    { "text": "Деструктор", "correct": false }
+                ]
+            },
+            {
+                "id": 12,
+                "text": "Что делает `abstract` перед классом?",
+                "options": [
+                    { "text": "Запрещает создание объектов этого класса", "correct": true },
+                    { "text": "Указывает на статический класс", "correct": false },
+                    { "text": "Определяет виртуальный метод", "correct": false }
+                ]
+            },
+            {
+                "id": 13,
+                "text": "Что такое интерфейс в ООП?",
+                "options": [
+                    { "text": "Набор абстрактных методов", "correct": true },
+                    { "text": "Реализация методов", "correct": false },
+                    { "text": "Статический класс", "correct": false }
+                ]
+            },
+            {
+                "id": 14,
+                "text": "Что такое виртуальный деструктор?",
+                "options": [
+                    { "text": "Деструктор, который можна переопределить", "correct": true },
+                    { "text": "Деструктор, который нельзя переопределить", "correct": false },
+                    { "text": "Статический деструктор", "correct": false }
+                ]
+            },
+            {
+                "id": 15,
+                "text": "Что такое переопределение метода?",
+                "options": [
+                    { "text": "Создание нового метода", "correct": false },
+                    { "text": "Изменение реализации метода в производном классе", "correct": true },
+                    { "text": "Создание статического метода", "correct": false }
+                ]
+            },
+            {
+                "id": 16,
+                "text": "Что такое полиморфизм во время выполнения?",
+                "options": [
+                    { "text": "Переопределение методов", "correct": true },
+                    { "text": "Перегрузка методов", "correct": false },
+                    { "text": "Создание объектов", "correct": false }
+                ]
+            },
+            {
+                "id": 17,
+                "text": "Что такое статический метод?",
+                "options": [
+                    { "text": "Метод, принадлежащий классу, а не конкретному объекту", "correct": true },
+                    { "text": "Метод без параметров", "correct": false },
+                    { "text": "Метод, который нельзя переопределить", "correct": false }
+                ]
+            },
+            {
+                "id": 18,
+                "text": "Какой из принципов ООП позволяет создавать интерфейсы?",
+                "options": [
+                    { "text": "Абстракция", "correct": true },
+                    { "text": "Наследование", "correct": false },
+                    { "text": "Инкапсуляция", "correct": false }
+                ]
+            },
+            {
+                "id": 19,
+                "text": "Что такое статическая переменная?",
+                "options": [
+                    { "text": "Переменная, которая принадлежит классу", "correct": true },
+                    { "text": "Переменная, которая принадлежит экземпляру", "correct": false },
+                    { "text": "Переменная, которая не может быть изменена", "correct": false }
+                ]
+            },
+            {
+                "id": 20,
+                "text": "Что такое чисто виртуальный метод?",
+                "options": [
+                    { "text": "Метод без реализации", "correct": true },
+                    { "text": "Метод с частичной реализацией", "correct": false },
+                    { "text": "Метод, который может быть вызван", "correct": false }
+                ]
+            },
+            {
+                "id": 21,
+                "text": "Что такое конструктор?",
+                "options": [
+                    { "text": "Метод для инициализации объекта", "correct": true },
+                    { "text": "Метод для удаления объекта", "correct": false },
+                    { "text": "Метод, который нельзя переопределить", "correct": false }
+                ]
+            },
+            {
+                "id": 22,
+                "text": "Какой оператор используется для перегрузки операторов?",
+                "options": [
+                    { "text": "operator", "correct": true },
+                    { "text": "new", "correct": false },
+                    { "text": "this", "correct": false }
+                ]
+            },
+            {
+                "id": 23,
+                "text": "Что такое наследуемый метод?",
+                "options": [
+                    { "text": "Метод, доступный в дочернем классе", "correct": true },
+                    { "text": "Метод, который нельзя переопределить", "correct": false },
+                    { "text": "Метод, объявленный только в дочернем классе", "correct": false }
                 ]
             }
         ]
     }
 ]
-

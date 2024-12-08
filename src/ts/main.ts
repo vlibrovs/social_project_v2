@@ -21,19 +21,22 @@ class SelectionScene extends Scene {
     constructor(repository: Repository) {
         super()
         this.repository = repository;
-        this.tests = repository.getTests();
         this.content = document.querySelector(".content") as HTMLDivElement;
         this.title = document.querySelector(".content.selection > .title") as HTMLHeadingElement;
         this.container = document.querySelector(".content > .container") as HTMLDivElement;
         this.select = document.getElementById("test_selector") as HTMLSelectElement;
         this.button = document.getElementById("test_start") as HTMLButtonElement;
 
-        this.loadTests();
+        this.repository.getTests().then((tests) => {
+            this.tests = tests;
+            this.loadTests();
+        });
+
     }
 
     private loadTests(): void {
         for (let i = 0; i < this.tests.length; i++) {
-            this.select.options.add(new Option(this.tests[i].getTitle(), "test" + i.toString()));
+            this.select.options.add(new Option(this.tests[i].title, "test" + i.toString()));
         }
     }
 
@@ -79,15 +82,15 @@ class QuestionScene extends Scene {
         this.container.innerHTML = "";
         this.options = [];
         this.correct = [];
-        this.questionID.textContent = "Вопрос #" + question.getId();
-        this.title.textContent = question.getText();
-        const opt = question.getOptions();
+        this.questionID.textContent = "Вопрос #" + question.id;
+        this.title.textContent = question.text;
+        const opt = question.options;
         this.container.dataset.amount = opt.length.toString();
         for (let i = 0; i < opt.length; i++) {
             this.options.push(document.createElement("button") as HTMLButtonElement);
-            this.correct.push(opt[i].isCorrect());
+            this.correct.push(opt[i].correct);
             this.options[i].classList.add("answer_btn");
-            this.options[i].textContent = opt[i].getText();
+            this.options[i].textContent = opt[i].text;
             this.container.appendChild(this.options[i]);
 
             if (!last) {
@@ -129,15 +132,15 @@ class ResultsScene extends Scene {
 
     public loadResults(test: Test, stats: boolean[]): void {
         this.container.innerHTML = "";
-        this.subtitle.textContent = test.getTitle();
-        const questions = test.getQuestions();
+        this.subtitle.textContent = test.title;
+        const questions = test.questions;
         for (let i = 0; i < questions.length; i++) {
             const res = document.createElement("div");
             res.classList.add("result");
 
             const name = document.createElement("div");
             name.classList.add("question");
-            name.textContent = (i+1).toString() + ". " + questions[i].getText();
+            name.textContent = (i+1).toString() + ". " + questions[i].text;
 
             const score = document.createElement("div");
             score.classList.add("score");
@@ -164,72 +167,30 @@ class ResultsScene extends Scene {
 }
 
 class AnswerOption {
-    private text: string;
-    private correct: boolean;
-
-    constructor(text: string = "", correct: boolean = false) {
-        this.text = text;
-        this.correct = correct;
-    }
-
-    public getText(): string { return this.text; }
-    public isCorrect(): boolean { return this.correct; }
+    public text: string;
+    public correct: boolean;
 }
 
 class Question {
-    private id: number;
-    private text: string;
-    private options: AnswerOption[];
-
-    constructor(id: number = 0, text: string = "", options: AnswerOption[] = []) {
-        this.id = id;
-        this.text = text;
-        this.options = options;
-    }
-
-    public getId(): number { return this.id; }
-    public getText(): string { return this.text; }
-    public getOptions(): AnswerOption[] { return this.options; }
+    public id: number;
+    public text: string;
+    public options: AnswerOption[];
 }
 
 class Test {
-    private title: string;
-    private questions: Question[];
-
-    constructor(title: string = "", questions: Question[] = []) {
-        this.title = title;
-        this.questions = questions;
-    }
-
-    public getTitle(): string { return this.title; }
-    public getQuestions(): Question[] { return this.questions; }
-    public getLength(): number { return this.questions.length; }
+    public title: string;
+    public questions: Question[];
 }
 
 interface Repository {
-    getTests(): Test[];
+    getTests(): Promise<Test[]>;
 }
 
 class LocalRepository implements Repository {
-    private tests: Test[];
-    constructor() {
-        this.tests = [
-            new Test("Да или нет?",
-                [
-                    new Question(1, "Да?", [
-                        new AnswerOption("Да", true),
-                        new AnswerOption("Нет", false)
-                    ]),
-                    new Question(2, "Нет?", [
-                        new AnswerOption("Да", false),
-                        new AnswerOption("Нет", true)
-                    ]),
-                ]
-            )
-        ];
-    }
-    getTests(): Test[] {
-        return this.tests;
+    async getTests(): Promise<Test[]> {
+        const response = await fetch("data/tests.json");
+        const data = await response.json();
+        return data as Test[];
     }
 }
 
@@ -279,11 +240,11 @@ class TestManager {
     }
 
     public end(): boolean {
-        return this.questionId == this.test.getLength();
+        return this.questionId == this.test.questions.length;
     }
 
     public nextQuestion(): Question {
-        return this.test.getQuestions()[this.questionId++];
+        return this.test.questions[this.questionId++];
     }
 
     public getTest(): Test { return this.test; }
