@@ -113,19 +113,20 @@
         "questions": [
             {
                 "id": 1,
-                "text": "Что такое переменная в C++?",
+                "text": "Как объявить переменную в С++?",
                 "options": [
-                    { "text": "Это функция", "correct": false },
-                    { "text": "Это контейнер для хранения данных", "correct": true },
-                    { "text": "Это ошибка компиляции", "correct": false }
+                    { "text": "var a = 10;", "correct": false },
+                    { "text": "int a = 10;", "correct": true },
+                    { "text": "a = 10;", "correct": false },
+                    { "text": "var a: int = 10;", "correct": false }
                 ]
             },
             {
                 "id": 2,
-                "text": "Какой оператор используется для присвоения значения переменной?",
+                "text": "Как выглядит оператор присваивания в С++?",
                 "options": [
-                    { "text": "'=='", "correct": false },
-                    { "text": "'='", "correct": true },
+                    { "text": "==", "correct": false },
+                    { "text": "=", "correct": true },
                     { "text": ":=", "correct": false }
                 ]
             },
@@ -140,7 +141,7 @@
             },
             {
                 "id": 4,
-                "text": "Какой ключевое слово используется для создания класса?",
+                "text": "Какое ключевое слово используется для создания класса?",
                 "options": [
                     { "text": "struct", "correct": false },
                     { "text": "class", "correct": true },
@@ -152,7 +153,7 @@
                 "text": "Какой из следующих вариантов является корректным комментарием в C++?",
                 "options": [
                     { "text": "// Это комментарий", "correct": true },
-                    { "text": "/ Это комментарий /", "correct": false },
+                    { "text": "# Это комментарий ", "correct": false },
                     { "text": "Оба варианта верны", "correct": false }
                 ]
             },
@@ -162,30 +163,31 @@
                 "options": [
                     { "text": "char", "correct": true },
                     { "text": "string", "correct": false },
-                    { "text": "int", "correct": false }
+                    { "text": "symbol", "correct": false }
                 ]
             },
             {
                 "id": 7,
-                "text": "Что делает оператор `++` в C++?",
+                "text": "Что делает операция `++` в C++?",
                 "options": [
                     { "text": "Увеличивает значение на 1", "correct": true },
-                    { "text": "Уменьшает значение на 1", "correct": false },
-                    { "text": "Сравнивает два значения", "correct": false }
+                    { "text": "Складывает числа", "correct": false },
+                    { "text": "Такой операции в С++ не существует", "correct": false }
                 ]
             },
             {
                 "id": 8,
-                "text": "Как написать конструкцию `if` в C++?",
+                "text": "Какая структура условного оператора в C++?",
                 "options": [
                     { "text": "if (условие) {...}", "correct": true },
                     { "text": "if условие {...}", "correct": false },
-                    { "text": "если (условие) {...}", "correct": false }
+                    { "text": "(условие) if {...}", "correct": false },
+                    { "text": "do {...} if (условие)", "correct": false }
                 ]
             },
             {
                 "id": 9,
-                "text": "Какой метод используется для считывания ввода с консоли?",
+                "text": "Какой метод используется для считывания данных из стандартного потока ввода?",
                 "options": [
                     { "text": "input", "correct": false },
                     { "text": "scan", "correct": false },
@@ -194,11 +196,12 @@
             },
             {
                 "id": 10,
-                "text": "Какое значение будет выведено, если переменная `x` равна 5 и мы напечатаем `x * 2`?",
+                "text": "Что будет выведено в результате выполнения `cout << x++;`, если переменная х изначально равна 5?",
                 "options": [
-                    { "text": "10", "correct": true },
-                    { "text": "25", "correct": false },
-                    { "text": "2", "correct": false }
+                    { "text": "5", "correct": true },
+                    { "text": "6", "correct": false },
+                    { "text": "Ошибка выполнения", "correct": false },
+                    { "text": "Ошибка компиляции", "correct": false }
                 ]
             },
             {
@@ -207,7 +210,8 @@
                 "options": [
                     { "text": "void functionName();", "correct": true },
                     { "text": "functionName();", "correct": false },
-                    { "text": "int functionName();", "correct": false }
+                    { "text": "none functionName();", "correct": false },
+                    { "text": "null functionName();", "correct": false }
                 ]
             },
             {
@@ -221,20 +225,21 @@
             },
             {
                 "id": 13,
-                "text": "Что такое перегрузка функции?",
+                "text": "Что такое перегрузка функций?",
                 "options": [
-                    { "text": "Определение функции с разными возвращаемыми типами", "correct": false },
-                    { "text": "Определение функции с тем же именем, но разным количеством аргументов", "correct": true },
-                    { "text": "Определение функции внутри другой функции", "correct": false }
+                    { "text": "Определение разных функций с одинаковым поведением", "correct": false },
+                    { "text": "Определение функций с одинаковым именем и разным списком параметров", "correct": true },
+                    { "text": "Определение функции внутри другой функции", "correct": false },
+                    { "text": "Определение функции, которая вызывает саму себя", "correct": false }
                 ]
             },
             {
                 "id": 14,
-                "text": "Какой из этих типов является ссылкой?",
+                "text": "Какая из этих переменных является ссылкой?",
                 "options": [
-                    { "text": "int", "correct": false },
-                    { "text": "int*", "correct": false },
-                    { "text": "int&", "correct": true }
+                    { "text": "int a", "correct": false },
+                    { "text": "int* a", "correct": false },
+                    { "text": "int& a", "correct": true }
                 ]
             },
             {
