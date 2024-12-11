@@ -2,11 +2,13 @@
     --gradient-start: #5de0e6;
     --gradient-end: #004aad;
     --primary: #39a1eb;
+    --primary-hover: #2186ce;
     --background: #fff;
     --on-primary: #fff;
     --text: #545454;
     --correct: green;
     --incorrect: red;
+    --answer-hover: #d8d8d8;
 }
 
 * {
@@ -55,10 +57,16 @@ button, select {
 }
 
 button {
+    transition: 0.5s;
     background-color: var(--primary);
     color: var(--on-primary);
     border: none;
     font-weight: bold;
+}
+
+button:hover {
+    transition: 0.5s;
+    background-color: var(--primary-hover);
 }
 
 select {
@@ -132,6 +140,10 @@ select {
     border: var(--text) solid 3px;
     height: 10vh;
     width: 100%;
+}
+
+.answer_btn:hover {
+    background-color: var(--answer-hover);
 }
 
 .content.results {
